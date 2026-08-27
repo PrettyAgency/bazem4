@@ -161,15 +161,16 @@ button{font-family:var(--sans);cursor:pointer}
 .filter-btn{font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--line);background:transparent;color:var(--ink);transition:all .25s ease}
 .filter-btn.is-active{border-color:var(--ink);background:var(--ink);color:var(--cream)}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:32px}
-.project-card{position:relative;height:460px;overflow:hidden;background:#D9D0C1;cursor:pointer}
-.project-card img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.project-card{position:relative;height:560px;overflow:hidden;background:#D9D0C1;cursor:pointer}
+.project-card img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
 .project-card:hover img{transform:scale(1.06)}
 .project-card__tag{position:absolute;top:20px;left:20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:rgba(244,239,230,.9);padding:6px 12px;white-space:nowrap}
-.project-card__info{position:absolute;left:0;right:0;bottom:0;padding:26px;background:linear-gradient(180deg,rgba(18,17,16,0) 0%,rgba(18,17,16,.84) 100%)}
+.project-card__info{position:absolute;left:0;right:0;bottom:0;padding:26px;background:linear-gradient(180deg,rgba(18,17,16,0) 0%,rgba(18,17,16,.89) 55%,rgba(18,17,16,.92) 100%);transform:translateY(28px);transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.project-card:hover .project-card__info{transform:translateY(0)}
 .project-card__name{font-family:var(--serif);font-size:28px;color:var(--cream)}
 .project-card__loc{font-size:13px;color:rgba(244,239,230,.75);margin-top:4px}
-.project-card__desc{font-size:13px;line-height:1.6;color:rgba(244,239,230,.85);margin-top:14px;max-width:320px;opacity:0;transform:translateY(10px);transition:opacity .35s ease,transform .35s ease}
-.project-card:hover .project-card__desc{opacity:1;transform:translateY(0)}
+.project-card__desc{font-size:13px;line-height:1.6;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6);margin-top:14px;max-width:320px;opacity:0;transition:opacity .4s ease .1s}
+.project-card:hover .project-card__desc{opacity:1}
 .project-card.is-hidden{display:none}
 
 /* ===== About page ===== */
